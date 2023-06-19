@@ -43,7 +43,7 @@ const LandingPage = () => {
       const { token } = data.createUser;
       console.log(token); //! REMOVE
       AuthService.login(token);
-      navigate("/home");
+      navigate.push("/home");
     } catch (error) {
       console.error(error.message);
       setError(error.message);
@@ -56,7 +56,7 @@ const LandingPage = () => {
       const { token } = data.login;
       localStorage.setItem("id_token", token);
       AuthService.login(token);
-      navigate("/home");
+      navigate.push("/home");
     } catch (error) {
       console.error(error.message);
       setError('Username or password is incorrect')

@@ -28,6 +28,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
 app.use('/graphql', (req, res, next) => {
   console.log(req.body); //! this is logging the request body so that we can see what data is being passed to GraphQL
   next();

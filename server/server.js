@@ -7,7 +7,7 @@ const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 const cors = require("cors");
 
-const PORT = Number.parseInt(process.env.PORT) || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,

@@ -9,7 +9,7 @@ import EditProfile from './components/HomePage/pages/EditProfile/EditProfile';
 import Profile from './components/HomePage/pages/Profile/Profile';
 
 const httpLink = createHttpLink({
-  uri: process.env.GRAPHQL_URI || 'http://localhost:3001/graphql',
+  uri: process.env.GRAPHQL_URI || 'https://beat-blend1-d7a18402c8e3.herokuapp.com/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {

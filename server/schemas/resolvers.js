@@ -76,7 +76,7 @@ const resolvers = {
         };
       } catch (error) {
         console.error(error);
-        throw new Error("Failed to create user");
+        throw new Error("Failed to create user", error);
       }
     },
     login: async (parent, { email, password }) => {
